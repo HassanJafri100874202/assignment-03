@@ -1,0 +1,27 @@
+<!-- views/exercises.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Exercises</title>
+</head>
+<body>
+  <h1>All Exercises</h1>
+
+  <% if (exercises.length > 0) { %>
+    <ul>
+      <% exercises.forEach(exercise => { %>
+        <li>
+          <strong>Name:</strong> <%= exercise.name %><br>
+          <strong>Category:</strong> <%= exercise.category %><br>
+          <strong>Duration:</strong> <%= exercise.duration %> minutes
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No exercises available.</p>
+  <% } %>
+</body>
+</html>

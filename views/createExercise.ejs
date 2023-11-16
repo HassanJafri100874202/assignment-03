@@ -1,0 +1,30 @@
+<!-- views/createExercise.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Exercise</title>
+</head>
+<body>
+  <h1>Create Exercise</h1>
+
+  <form action="/exercises" method="POST">
+    <!-- Exercise Name -->
+    <label for="exerciseName">Exercise Name:</label>
+    <input type="text" id="exerciseName" name="name" required>
+
+    <!-- Exercise Category -->
+    <label for="exerciseCategory">Exercise Category:</label>
+    <input type="text" id="exerciseCategory" name="category" required>
+
+    <!-- Exercise Duration -->
+    <label for="exerciseDuration">Exercise Duration (in minutes):</label>
+    <input type="number" id="exerciseDuration" name="duration" required>
+
+    <!-- Submit Button -->
+    <button type="submit">Create Exercise</button>
+  </form>
+</body>
+</html>
